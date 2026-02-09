@@ -158,7 +158,7 @@ cd ../
 fi
 
 if [ ! -s /etc/danted/sbin/sockd ] || [ -z "$(/etc/danted/sbin/sockd -v | grep "$VERSION")" ];then
-wget http://www.inet.no/dante/files/dante-1.4.1.tar.gz
+wget http://www.inet.no/dante/files/dante-1.4.4.tar.gz
 tar zxvf dante*
 cd dante*
 ./configure --with-sockd-conf=${CONFIGFILE} --prefix=/etc/danted
@@ -190,7 +190,7 @@ cat > /etc/init.d/danted <<'EOF'
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 DAEMON=/etc/danted/sbin/sockd
-VERSION="1.4.1"
+VERSION="1.4.4"
 DESC="Dante SOCKS daemon"
 PIDFILE="/var/run/sockd.pid"
 CONFIGFILE=/etc/danted/sockd.conf
