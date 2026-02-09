@@ -2,10 +2,10 @@
 service danted stop > /dev/null 2>&1
 rm /etc/danted -rf 
 
-VERSION="v1.4.1"
-DEFAULT_PORT="1080"
-DEFAULT_USER="danted"
-DEFAULT_PAWD="danted"
+VERSION="v1.4.4"
+DEFAULT_PORT="45000"
+DEFAULT_USER="proxyuser"
+DEFAULT_PAWD="proxygetpass"
 MASTER_IP="0.0.0.0/0"
 SERVERIP=$(ifconfig | grep 'inet addr' | grep -Ev 'inet addr:127.0.0|inet addr:192.168.0|inet addr:10.0.0' | sed -n 's/.*inet addr:\([^ ]*\) .*/\1/p')
 if [ -z "$SERVERIP" ]; then
